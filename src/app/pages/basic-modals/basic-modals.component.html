@@ -1,0 +1,15 @@
+<pre>isBasicModalOpen: {{ isBasicModalOpen }}</pre>
+<pre>isFancyModalOpen: {{ isFancyModalOpen }}</pre>
+
+<button class="btn btn-primary" (click)="openBasicModal()">Basic</button>
+<button class="btn btn-primary" (click)="openFancyModal()">Fancy</button>
+
+<app-modal-basic
+  [(isOpen)]="isBasicModalOpen"
+  [title]="basicTitle"
+  [message]="'some text'"></app-modal-basic>
+
+<app-modal-basic
+  [(isOpen)]="isFancyModalOpen"
+  [title]="fancyTitle"
+  [message]="'some text'"></app-modal-basic>
