@@ -4,7 +4,10 @@
 <button class="btn btn-primary" (click)="basic.open()">Basic</button>
 <button class="btn btn-primary" (click)="fancy.open()">Fancy</button>
 
-<app-modal-content #basic>
+<app-modal-content
+  #basic
+  (opened)="log('open basic')"
+  (closed)="log('close basic')">
   <div class="app-modal-header">
     <button type="button" class="close" (click)="basic.close()"><span>&times;</span></button>
     <h4 class="modal-title">Basic</h4>
@@ -15,7 +18,10 @@
   </div>
 </app-modal-content>
 
-<app-modal-content #fancy>
+<app-modal-content
+  #fancy
+  (opened)="log('open fancy')"
+  (closed)="log('close fancy')">
   <div class="app-modal-header">
     <button type="button" class="close" (click)="fancy.close()"><span>&times;</span></button>
     <h4 class="modal-title">Fancy</h4>

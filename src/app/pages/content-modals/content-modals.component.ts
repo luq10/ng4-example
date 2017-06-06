@@ -17,4 +17,8 @@ export class ContentModalsComponent implements OnInit, AfterViewInit {
     //
     // this.basic.open();
   }
+
+  log(message: string) {
+    console.log(message);
+  }
 }
